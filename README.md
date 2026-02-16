@@ -1,1 +1,1 @@
-# koloriya_ge
+# React + TypeScript + Vite App Koloriya
