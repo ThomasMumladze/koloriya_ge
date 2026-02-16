@@ -1,3 +1,5 @@
+@use "./style/_root";
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,5 +7,26 @@
 }
 
 :root {
-    background-color: #242424;
+    background-color: #ffffff;
+    width: 100%;
+
+    main {
+        margin: 0 auto;
+
+        @media screen and (min-width: 1440px) {
+            max-width: 1440px;
+        }
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
