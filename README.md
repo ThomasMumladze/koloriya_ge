@@ -1,6 +1,7 @@
 # React + TypeScript + Vite App Koloriya
 
 **Project by: Thomas Mumladze**
+[LinkedIn] - (https://www.linkedin.com/in/thomasmumladze/)
 
 [node-version] - v24.12.0
 
@@ -13,6 +14,17 @@
 - **typescript**
 - **SCSS / SASS**
 - **react-icons**
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/Koloriya.git
+cd Koloriya
+npm install
+npm audit       # optional check for vulnerabilities
+npm audit fix   # optional automatic fix
+npm start
+```
 
 ** ------------------------------------------------------------- **
 
