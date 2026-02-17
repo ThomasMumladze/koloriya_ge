@@ -1,23 +1,37 @@
 import page_logo from "../assets/page_logo.png";
 
-// React Icons
-import { RiMenuUnfold2Fill } from "react-icons/ri";
-import { RiMenuUnfoldFill } from "react-icons/ri";
+//react icons
+import { AiOutlineUser } from "react-icons/ai";
+import { FaShoppingBasket } from "react-icons/fa";
+import { GrSearch } from "react-icons/gr";
+
+//components
+import Navigation from "../components/Navigation";
+import Button from "../components/Button";
 
 const Header = () => {
     return (
         <header>
             <div className="header-container">
                 <div className="header-container__logo">
-                    <div className="svg">
-                        <RiMenuUnfold2Fill />
-                        <RiMenuUnfoldFill />
-                    </div>
-
-                    <img src={page_logo} alt="Page Logo..." />
+                    <a href="#">
+                        <img src={page_logo} alt="Page Logo..." />
+                    </a>
                 </div>
-                <div className="header-container__navigation"></div>
-                <div className="header-container__menu-button"></div>
+                <div className="header-container__navigation">
+                    <Navigation />
+                </div>
+                <div className="header-container__menu-button">
+                    <Button onClick={() => console.log("Search button clicked")}>
+                        <GrSearch />
+                    </Button>
+                    <Button onClick={() => console.log("User button clicked")}>
+                        <AiOutlineUser />
+                    </Button>
+                    <Button onClick={() => console.log("Basket button clicked")}>
+                        <FaShoppingBasket />
+                    </Button>
+                </div>
             </div>
         </header>
     );

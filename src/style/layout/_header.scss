@@ -32,15 +32,31 @@ header {
             }
         }
         &__navigation {
-            background-color: red;
-            padding: 20px;
             width: max-content;
         }
 
         &__menu-button {
-            background-color: rebeccapurple;
+            @include flex-display(center, center, 16px, nowrap, row);
             padding: 20px;
             width: max-content;
+
+            button {
+                border-radius: 50%;
+                background-color: #f5f6f2;
+
+                svg {
+                    font-size: 21px;
+                    transition: 0.25s ease-in-out;
+                }
+
+                &:hover {
+                    background-color: #e32020;
+
+                    svg {
+                        color: #fff;
+                    }
+                }
+            }
         }
     }
 }
