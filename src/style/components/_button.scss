@@ -1,0 +1,10 @@
+@use "../abstract/mixin" as *;
+
+button {
+    @include flex-display(center, center, 0px, nowrap, row);
+
+    background-color: transparent;
+    border: solid 1px rgba(0, 0, 0, 0);
+    padding: 10px;
+    transition: 0.25s ease-in-out;
+}
