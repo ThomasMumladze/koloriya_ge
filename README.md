@@ -43,6 +43,43 @@ npm start
     ├─ package.json
     └─ README.md
 
+## Styling Architecture
+
+All style files for components, pages, layout, and other sections are organized inside the `styles/` folder.
+
+Each SCSS file is imported using `@use` inside a central `_root.scss` file.  
+Then, `_root.scss` is imported into `index.scss`.
+
+This structure provides:
+
+- Better organization
+- Improved scalability
+- Optimized stylesheet management
+- Clear and maintainable architecture
+- Easier debugging and updates
+
+### Structure Example
+
+src/
+│
+├─ styles/
+│ ├─ components/
+│ ├─ pages/
+│ ├─ layout/
+│ ├─ root.scss
+│
+├─ index.scss
+
+### SCSS Flow
+
+All partial SCSS files  
+⬇  
+`_root.scss`  
+⬇  
+`index.scss`
+
+This makes the styling system flexible, optimized, and easy to understand.
+
 ** ------------------------------------------------------------- **
 
 ## Vite Configuration
