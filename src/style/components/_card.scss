@@ -1,0 +1,112 @@
+@use "../abstract/mixin" as *;
+
+.product-card {
+    padding: 0 15px;
+    position: relative;
+
+    @media screen and (min-width: 1440px) {
+        flex: 1 1 25%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+    &__image {
+        overflow: hidden;
+        position: relative;
+
+        .image-popup1,
+        .image-popup2 {
+            height: auto;
+            overflow: hidden;
+            -webkit-transition:
+                opacity 1s,
+                -webkit-transform 1s;
+            transition:
+                opacity 1s,
+                -webkit-transform 1s;
+            transition:
+                opacity 1s,
+                transform 1s;
+            transition:
+                opacity 1s,
+                transform 1s,
+                -webkit-transform 1s;
+            width: 100%;
+        }
+
+        .image-popup2 {
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+        }
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        &:hover {
+            .image-popup1 {
+                opacity: 0;
+                -webkit-transform: scale(1.08);
+                transform: scale(1.08);
+            }
+
+            .image-popup2 {
+                opacity: 1;
+                -webkit-transform: scale(1.08);
+                transform: scale(1.08);
+            }
+        }
+    }
+
+    &__content {
+        @include flex-display(flex-start, center, 0px, nowrap, column);
+        padding-top: 20px;
+
+        .rating {
+            @include flex-display(center, flex-start, 4px, nowrap, row);
+            font-size: 1.1rem;
+
+            svg {
+                color: #ee403d;
+            }
+        }
+
+        div {
+            &:not(:last-child) {
+                margin-bottom: 8px !important;
+            }
+        }
+    }
+
+    &__quick-action-button,
+    &__badge {
+        @include flex-display(center, center, 0px, nowrap, row);
+        background-color: #fff;
+        border-radius: 50%;
+        height: 50px;
+        position: absolute;
+        top: 12px;
+        width: 50px;
+    }
+
+    &__quick-action-button {
+        left: 22px;
+        button {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__badge {
+        right: 22px;
+        span {
+            font-size: 14px;
+            color: #040404;
+        }
+    }
+}
